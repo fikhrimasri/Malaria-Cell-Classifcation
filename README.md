@@ -1,1 +1,1 @@
-# Malaria-Cell-Classifcation
+# Malaria-Cell-Classification
