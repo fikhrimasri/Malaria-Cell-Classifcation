@@ -23,7 +23,12 @@ MODEL_PATH = 'Models/model_best.h5'
 
 #Load your trained model
 model = load_model(MODEL_PATH)
+
+#TensorFlow 2.x.x
 model._make_predict_function()          # Necessary to make everything ready to run on the GPU ahead of time
+
+#Tensorflow 2.2.0
+model.make_predict_function()
 print('Model Succes Load..')
 
 
@@ -39,7 +44,6 @@ def model_predict(filename, model):
 def index():
     # Main page
     return render_template('index.html')
-
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
@@ -63,6 +67,43 @@ def upload():
             return "Detect Malaria Cell"
     return None
 
+@app.route('/predict-url', methods=['GET', 'POST'])
+def predictUrl():
+    if request.method == 'POST':
+        url = request.form['url']
+        try:
+            if any(ext in url for ext in ['.png','.jpg','.gif','.jpeg','.svg','.tiff']):
+                #Find The Last Segment Of Url
+                firstpos = url.rfind("/")
+                lastpos = len(url)
+
+                #Define Folder Path and Filename
+                folder_path = os.path.join(os.getcwd(), 'uploads')
+                filename = url[firstpos+1:lastpos]
+
+                #Execute Wget
+                try:
+                    cmd = "wget -P "+folder_path+" "+url
+                    os.system(cmd)
+
+                    #Get Saved File
+                    saved_file = os.path.join(folder_path,filename)
+
+                    pred = model_predict(saved_file, model)   #Prediction
+                    os.remove(saved_file) #removes file from the server after prediction has been returned
+
+                    if pred[0] > 0.5:
+                        return "Not Detect Malaria Cell"
+                    else:
+                        return "Detect Malaria Cell"
+                except: 
+                    return "Unknown Error"
+
+            else:
+                return "Not A Public Image"
+        except:
+            return "General Error"
+    return None
     #this section is used by gunicorn to serve the app on Heroku
 if __name__ == '__main__':
         app.run()
