@@ -1,8 +1,11 @@
 $(document).ready(function () {
     // Init
     $('.image-section').hide();
+    $('.image-section-url').hide();
+
     $('.loader').hide();
     $('#result').hide();
+    $('#result-url').hide();
 
     // Upload Preview
     function readURL(input) {
@@ -47,6 +50,41 @@ $(document).ready(function () {
                 $('#result').fadeIn(600);
                 $('#result').text(' Result :  ' + data);
                 console.log('Success!');
+            },
+        });
+    });
+
+    // Predict From Url
+    $('#btn-predict-url').click(function () { 
+
+        var form_data = new FormData($('#predict-url')[0]);
+
+        $(this).hide();
+        $('.loader').show();
+
+        $('.image-section-url').show();
+        $('#result-url').text('');
+        $('#result-url').hide();
+
+        $('#imagePreview-url').css('background-image', 'url(' + $("#url").val() + ')');
+        $('#imagePreview-url').hide();
+        $('#imagePreview-url').fadeIn(650);
+
+        $.ajax({
+            type: 'POST',
+            url: '/predict-url',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: true,
+            success: function (data) {
+                // Get and display the result
+                $('.loader').hide();
+                $('#result-url').fadeIn(600);
+                $('#result-url').text(' Result :  ' + data);
+                console.log('Success!');
+                $('#btn-predict-url').show();
             },
         });
     });
