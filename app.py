@@ -35,7 +35,7 @@ print('Model Succes Load..')
 def model_predict(filename, model):
    np_image = Image.open(filename)
    np_image = np.array(np_image).astype('float32')/255
-   np_image = transform.resize(np_image, (64, 64))
+   np_image = transform.resize(np_image, (64, 64,3))
    np_image = np.expand_dims(np_image, axis=0)
    pred = model.predict(np_image)
    return pred
