@@ -22,13 +22,13 @@
     <div class="container">
         <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
     </div>
+    <footer class="footer bg-info text-white">
+        <div class="container text-center pt-2">
+            <p>Copyright 2020 &copy; Group BDG4-D</p>
+        </div>
+        <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+    </footer>
 </body>
 
-<footer class="footer bg-info text-white">
-    <div class="container text-center">
-        <p>Copyright 2020 &copy; Group BDG4-D</p>
-    </div>
-    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
-</footer>
 
 </html>
