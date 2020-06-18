@@ -1,6 +1,6 @@
 .img-preview {
-    width: 256px;
-    height: 256px;
+    width: 200px;
+    height: 200px;
     position: relative;
     border: 5px solid #F8F8F8;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -11,7 +11,7 @@
 .img-preview>div {
     width: 100%;
     height: 100%;
-    background-size: 256px 256px;
+    background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -59,8 +59,5 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    line-height: 60px; /* Vertically center the text there */
     background-color: #f5f5f5;
 }
