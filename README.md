@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 To start the server using Flask:
 
-Linux and iOS:
+Linux and MacOS:
 ```bash
 export APP_FLASK=[path/to/project]/app.py
 flask run
