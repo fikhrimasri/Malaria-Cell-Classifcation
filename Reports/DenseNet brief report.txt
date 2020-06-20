@@ -1,0 +1,62 @@
+# DenseNet Model Load
+
+CPU times: user 5.29 s, sys: 280 ms, total: 5.57 s
+Wall time: 6.23 s
+
+# DenseNet Summary
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+densenet121 (Model)          (None, 2, 2, 1024)        7037504   
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1024)              0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1024)              0         
+_________________________________________________________________
+dense (Dense)                (None, 1)                 1025      
+=================================================================
+Total params: 7,038,529
+Trainable params: 6,954,881
+Non-trainable params: 83,648
+
+# DenseNet Compile
+
+CPU times: user 29.1 ms, sys: 972 µs, total: 30.1 ms
+Wall time: 32.8 ms
+
+# DenseNet Training Time
+
+About ~1 Hour
+
+# Test Accuracy And Loss
+
+test loss, test accuracy: [0.10159721225500107, 0.9676543474197388]
+
+# Confusion Matrix
+
+Report Summary:
+Precision	: 96.12%
+Recall		: 97.47%
+F1 Score	: 96.79%
+
+# Saved Model Size
+
+85.4 MB
+
+# Saved Model Load Time
+
+Worst Case:
+CPU times: user 11.3 s, sys: 315 ms, total: 11.6 s
+Wall time: 14.6 s
+
+Best Case:
+CPU times: user 10.4 s, sys: 164 ms, total: 10.6 s
+Wall time: 10.5 s
+
+
+# Model Predict
+CPU times: user 3.98 s, sys: 417 ms, total: 4.4 s
+Wall time: 3.74 s
+

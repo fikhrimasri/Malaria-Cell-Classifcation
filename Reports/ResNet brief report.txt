@@ -1,0 +1,63 @@
+# ResNet Model Load
+
+CPU times: user 3.56 s, sys: 453 ms, total: 4.01 s
+Wall time: 4.22 s
+
+
+# ResNet Summary
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+resnet50 (Model)             (None, 2, 2, 2048)        23587712  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 2048)              0         
+_________________________________________________________________
+dropout (Dropout)            (None, 2048)              0         
+_________________________________________________________________
+dense (Dense)                (None, 1)                 2049      
+=================================================================
+Total params: 23,589,761
+Trainable params: 23,536,641
+Non-trainable params: 53,120
+
+# ResNet Compile
+
+CPU times: user 27.8 ms, sys: 945 µs, total: 28.7 ms
+Wall time: 28.8 ms
+
+# ResNet Training Time
+
+Around ~2 hours
+
+# Test Accuracy And Loss
+
+test loss, test accuracy: [0.12066527456045151, 0.9635828733444214]
+
+# Confusion Matrix
+
+Report Summary:
+Precision	: 95.52%
+Recall		: 97.29%
+F1 Score	: 96.39%
+
+# Saved Model Size
+
+283.4 MB
+
+# Saved Model Load Time
+
+Worst Case:
+CPU times: user 10.6 s, sys: 184 ms, total: 10.7 s
+Wall time: 10.7 s
+
+Best Case:
+CPU times: user 5.55 s, sys: 262 ms, total: 5.82 s
+Wall time: 5.38 s
+
+# Model Predict
+Detect Malaria Cell
+CPU times: user 2.01 s, sys: 300 ms, total: 2.31 s
+Wall time: 1.8 s
+
