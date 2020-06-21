@@ -2,7 +2,9 @@
 
 ## Overview
 
-This application goal is to determine whether someone has malaria or not based on the thin blood smear slide images
+Malaria is a life-threatening disease. It’s typically transmitted through the bite of an infected Anopheles mosquito. Infected mosquitoes carry the Plasmodium parasite. When this mosquito bites, the parasite is released into bloodstream.
+The goal of this project is to build a model that can detect malaria parasites in a cell image. The model will analyze a segmented red blood cell image and classify it as either "uninfected" or "parasitized".
+
 
 Dataset can be found [here](https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria)
 
@@ -52,7 +54,10 @@ Check if the server is started by going to browser and input url
 ```bash
 localhost:5000
 ```
+## Authors
 
+* **Fikhri Masri** --- [fikhrimasri](https://github.com/fikhrimasri)
+* **Dimas Anom Priyayi** --- [priyayidimas](https://github.com/priyayidimas)
 
 
 License
