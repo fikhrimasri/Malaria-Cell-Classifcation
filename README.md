@@ -8,6 +8,8 @@ The goal of this project is to build a model that can detect malaria parasites i
 
 Dataset can be found [here](https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria)
 
+The application can be seen [here](https://malaria-flask-app.herokuapp.com/)
+
 
 
 ## Requirements
@@ -59,14 +61,20 @@ localhost:5000
 * **Fikhri Masri** --- [fikhrimasri](https://github.com/fikhrimasri)
 * **Dimas Anom Priyayi** --- [priyayidimas](https://github.com/priyayidimas)
 
+## Demo
 
-License
-----
+### Using Upload
+<p align="center">
+  <img width="460" height="300" src="Demo/upload.gif">
+</p>
 
-MIT
+### Using URL
+<p align="center">
+  <img width="460" height="300" src="Demo/url.gif">
+</p>
 
 
-**Thank you!**
+
 
 [//]: # (This is simple comments)
 
