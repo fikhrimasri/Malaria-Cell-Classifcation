@@ -3,7 +3,7 @@
 ## Overview
 
 Malaria is a life-threatening disease. It’s typically transmitted through the bite of an infected Anopheles mosquito. Infected mosquitoes carry the Plasmodium parasite. When this mosquito bites, the parasite is released into bloodstream.
-The goal of this project is to build a model that can detect malaria parasites in a cell image. The model will analyze a segmented red blood cell image and classify it as either "uninfected" or "parasitized".
+The goal of this project is to build a model that can detect malaria parasites in a cell image. The model will analyze a segmented red blood cell image and classify it as either "uninfected" or "parasitized" using Densenet 121.
 
 
 Dataset can be found [here](https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria)
