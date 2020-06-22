@@ -56,10 +56,6 @@ Check if the server is started by going to browser and input url
 ```bash
 localhost:5000
 ```
-## Authors
-
-* **Fikhri Masri** --- [fikhrimasri](https://github.com/fikhrimasri)
-* **Dimas Anom Priyayi** --- [priyayidimas](https://github.com/priyayidimas)
 
 ## Demo
 
@@ -73,6 +69,10 @@ localhost:5000
   <img width="460" height="300" src="Demo/url.gif">
 </p>
 
+## Authors
+
+* **Fikhri Masri** --- [fikhrimasri](https://github.com/fikhrimasri)
+* **Dimas Anom Priyayi** --- [priyayidimas](https://github.com/priyayidimas)
 
 
 
