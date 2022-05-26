@@ -1,6 +1,6 @@
 numpy==1.18.5
 Flask==1.1.2
-tensorflow==2.2.0
+tensorflow==2.7.2
 Pillow==7.1.2
 scikit-image==0.17.2
 Werkzeug==1.0.1
